@@ -37,7 +37,7 @@ fun TelaInicial() {
             .padding(16.dp),
         verticalArrangement = Arrangement.Center
     ) {
-        Text("Bem-vindo ao Old Dragon!", style = MaterialTheme.typography.headlineSmall)
+        Text("Bem-vindo ao Shadows of Arkhun!", style = MaterialTheme.typography.headlineSmall)
         Spacer(modifier = Modifier.height(24.dp))
         Button(onClick = {
             val intent = Intent(context, MainActivity2::class.java)
