@@ -1,0 +1,1 @@
+calcio,HUMANO,MAGO,Atributos(forca=11, destreza=14, constituicao=12, inteligencia=16, sabedoria=13, carisma=11)
