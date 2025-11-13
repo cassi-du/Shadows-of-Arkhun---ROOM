@@ -16,6 +16,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import model.Personagem
+import android.content.Intent
 
 class ListCharactersActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,8 +67,19 @@ fun CharactersScreen() {
 
     Column(modifier = Modifier.padding(16.dp)) {
         // Botão para voltar à tela inicial
-        Button(onClick = { (contexto as Activity).finish() }, modifier = Modifier.fillMaxWidth()) {
-            Text("Voltar")
+        Button(    onClick = {
+            // Cria um Intent para iniciar a MainActivity
+            val intent = Intent(contexto, MainActivity::class.java)
+
+            // Inicia a MainActivity
+            contexto.startActivity(intent)
+
+            // fechar a activity atual (list characters)
+            (contexto as Activity).finish()
+        },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Voltar para a tela inicial")
         }
 
         Spacer(modifier = Modifier.height(12.dp))
